@@ -18,7 +18,6 @@ function plus0(zero) {
 }
 
 var uur = new Date();
-uur.setHours(06,00,0)
 var m = plus0(uur.getMinutes())
 tijd.innerHTML = uur.getHours() +  ':' + m;
 
@@ -37,16 +36,16 @@ nachtTijd.setHours(00,00,0)
 
 
 if (uur >= avondTijd) {
-    tekst.innerHTML = 'Het is avond';
+    tekst.innerHTML = 'Het is avond 🌝';
     dagfase.classList.add("avond")
 } else if (uur >= ochtendTijd && uur < middagTijd) {
-    tekst.innerHTML = 'Het is ochtend';
+    tekst.innerHTML = 'Het is ochtend ☕️';
     dagfase.classList.add("ochtend")
 } else if (uur >= middagTijd ) {
-    tekst.innerHTML = 'Het is middag';
+    tekst.innerHTML = 'Het is middag 🍃';
     dagfase.classList.add("middag")
 } else if (uur >= nachtTijd) {
-    tekst.innerHTML = 'Het is nacht';
+    tekst.innerHTML = 'Het is nacht 🌚';
     dagfase.classList.add("nacht")
 }
 

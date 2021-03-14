@@ -25,9 +25,15 @@ body {
 
 	background-image: url(/img/mars1.jpg);
 	background-size: cover;
+	background-position: center;
 	font-size: 1.6rem;
 
 	padding: 6.4rem;
+	height: 100vh;
+}
+
+main {
+	margin: 8rem;
 }
 
 #datum {
@@ -39,7 +45,7 @@ body {
 	box-shadow: 3px 4px 9px var(--blauw);
 	margin: 3.2rem;
 
-	animation: date 1s ease;
+	animation: date 1s ease-in;
 }
 
 #tijd {
@@ -64,11 +70,11 @@ body {
 }
 
 .ochtend {
-	background-color: #8d1e91;
+	background-color: #eac4d5;
 }
 
 .middag {
-	background-color: #a6e1fa;
+	background-color: #809bce;
 }
 
 .avond {
@@ -85,7 +91,7 @@ body {
 	}
 
 	50% {
-		transform: scale(1.5);
+		transform: scale(1.3);
 	}
 
 	100% {
@@ -95,11 +101,15 @@ body {
 
 @keyframes date {
 	0% {
-		transform: translateX(0);
+		transform: translateX(1em);
+	}
+
+	50% {
+		transform: translateY(2em);
 	}
 
 	100% {
-		transform: translateX(3);
+		transform: translateY(0);
 	}
 }
 
@@ -107,7 +117,14 @@ body {
 
 /* tablet */
 @media only screen and (min-width: 768px) {
-	/*  */
+	body {
+		font-size: 2.1rem;
+		padding: 3.2rem;
+	}
+
+	#datum, .dagfase {
+		margin: 9.2rem;
+	}
 }
 
 /* laptop */
@@ -115,6 +132,25 @@ body {
 	body {
 		background-image: url(/img/mars2.jpg);
 		background-size: cover;
+		background-position: center;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	
+	}
+
+	main {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	#datum, .dagfase {
+		font-size: 5.2rem;
+		margin: 3.2rem;
 	}
 }
 
@@ -123,5 +159,12 @@ body {
 	body {
 		background-image: url(/img/space.jpg);
 		background-size: cover;
+		background-position: center;
+		padding: 3.2rem;
+	}
+
+	#datum, .dagfase {
+		font-size: 6.4rem;
+		margin: 12rem;
 	}
 }
